@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAware | Stop Pollution</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Variables for consistent coloring */
+        :root {
+            --primary-color: #2e8b57;
+            --secondary-color: #1c3d2f;
+            --danger-color: #e63946;
+            --dark-color: #333333;
+            --light-color: #f4f4f9;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--secondary-color);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #246d44;
+        }
+
+        /* Generic Section Styling */
+        section {
+            padding: 5rem 10%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--secondary-color);
+        }
+
+        /* Grid Layouts for Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Downsides Section specifically */
+        .downsides {
+            background-color: white;
+        }
+
+        .downsides h2 {
+            color: var(--danger-color);
+        }
+
+        .downsides .card {
+            background: var(--light-color);
+            border-top: 4px solid var(--danger-color);
+        }
+
+        /* Call to Action Section */
+        .action {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+        }
+
+        .action h2 {
+            color: white;
+        }
+
+        .action p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            nav ul {
+                display: none; /* In a full site, this would be a hamburger menu */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">EcoAware</a>
+        <ul>
+            <li><a href="#about">The Crisis</a></li>
+            <li><a href="#downsides">The Downsides</a></li>
+            <li><a href="#action">Take Action</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Our Planet is Choking.</h1>
+        <p>Every single day, millions of tons of toxic waste and emissions are released into our air, water, and soil. It's time to wake up and clear the air.</p>
+        <a href="#downsides" class="btn">Understand the Impact</a>
+    </header>
+
+    <!-- About / Types of Pollution Section -->
+    <section id="about">
+        <h2>The Faces of Pollution</h2>
+        <div class="grid">
+            <div class="card">
+                <h3 style="color: #4a90e2;">Air Pollution</h3>
+                <p>Smog, greenhouse gases, and toxic chemicals are pumped into the atmosphere daily by factories and vehicles. This creates a blanket of toxicity that traps heat and destroys the air we breathe.</p>
+            </div>
+            <div class="card">
+                <h3 style="color: #27ae60;">Water Pollution</h3>
+                <p>Industrial waste, plastic dumps, and agricultural runoff contaminate our rivers and oceans. By 2050, there could be more plastic in the ocean than fish.</p>
+            </div>
+            <div class="card">
+                <h3 style="color: #e67e22;">Soil Pollution</h3>
+                <p>Excessive use of chemical fertilizers, pesticides, and poor waste management seeps hazardous chemicals into the earth, destroying arable land and poisoning our food supply.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Downsides Section -->
+    <section id="downsides" class="downsides">
+        <h2>The Devastating Downsides</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Severe Health Crisis</h3>
+                <p>Air pollution is linked to asthma, lung cancer, and cardiovascular diseases. The WHO estimates that 7 million people die prematurely every year due to exposure to polluted air.</p>
+            </div>
+            <div class="card">
+                <h3>Climate Change</h3>
+                <p>Greenhouse gas pollution traps heat in the atmosphere, accelerating global warming. This leads to extreme weather events, rising sea levels, and the destruction of natural habitats.</p>
+            </div>
+            <div class="card">
+                <h3>Extinction of Species</h3>
+                <p>Toxic chemicals in waterways cause mass die-offs of aquatic life. Oil spills destroy marine ecosystems, and deforestation for industrial growth displaces millions of animal species.</p>
+            </div>
+            <div class="card">
+                <h3>Economic Drain</h3>
+                <p>Pollution costs the global economy trillions of dollars annually. These costs stem from healthcare expenses, lost labor productivity, and the destruction of agricultural yields.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="action" class="action">
+        <h2>Be Part of the Solution</h2>
+        <p>We cannot wait for governments and corporations to act alone. Change starts at home. By making small, conscious choices every day, we can drastically reduce our footprint.</p>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 2rem;">
+            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px; max-width: 250px;">
+                <h3>Reduce Waste</h3>
+                <p style="font-size: 0.9rem; margin-top: 10px;">Say no to single-use plastics. Recycle properly and compost organic waste.</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px; max-width: 250px;">
+                <h3>Travel Smart</h3>
+                <p style="font-size: 0.9rem; margin-top: 10px;">Use public transport, carpool, bike, or walk to reduce vehicle emissions.</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px; max-width: 250px;">
+                <h3>Conserve Energy</h3>
+                <p style="font-size: 0.9rem; margin-top: 10px;">Turn off lights, switch to LED bulbs, and support renewable energy sources.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 EcoAware. Created for educational purposes to spread awareness about pollution.</p>
+    </footer>
+
+    <!-- Smooth Scrolling Script for older browsers -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
